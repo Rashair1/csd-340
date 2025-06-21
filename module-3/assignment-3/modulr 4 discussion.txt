@@ -1,0 +1,19 @@
+Research the Internet for an article on the current state of Java. Read the article and post your review on the Discussion Board in your own words, correctly quoting anything you may copy. Ensure you also:
+Share your opinions of the current state.
+Address how “Open Source” is related to the current version of Java.
+
+
+I found a really good article about the current state of Java by New Relic. They mentioned that Java is being adopted at a faster rate than other versions of Java. This tells me that Java is continuing to grow in popularity, and shows no signs of slowing down. In fact, Python is the only programming language that is more popular than Java. When it comes to demand, Java ranks third after Python and JavaScript. Another article that I read by Meghan Neville confirmed this. She provides trends and examples that show how Java is still widely used in 2025. "Java has remained popular due to its versatility and robustness" (Neville, 2025).  Java is still in good standing because it can be used for many different applications on a personal and professional level. It's another OOP tool. I personally haven't fully grasped Java yet. I understand most of the concepts, but I'm not ready to make full-fledged programs on my own. I still need some guidance here and there. I'm not fully comfortable with it so I wont give a big opinion on the state of Java, but I will say that I like Python a little bit better. It may be because I learned Python first though.
+
+
+
+
+
+
+
+
+References:
+
+Neville, M. (2025, May 29). Is Java still used in 2025? - softjourn. Softjourn Inc. https://softjourn.com/insights/is-java-still-used
+
+2024 state of the Java Ecosystem Report. New Relic. (n.d.). https://newrelic.com/resources/report/2024-state-of-the-java-ecosystem
