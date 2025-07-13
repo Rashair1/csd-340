@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+Rashai Robertson
+Module - 10
+7/13/2025
+-->
+<html>
+  <head>
+    <title>
+      CSD 340 Web Development with HTML and CSS
+    </title>
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="Module2, Assignment2" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Rashai Robertson" />
+    <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+
+      function hide() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "none";
+          }
+      }
+
+      function show() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "block";
+          }
+      }
+
+      function appear() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+          }
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='Robertson_Mod9_3.css' />
+
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    </header>
+  
+    <div class="navbar">
+      <a href="https://rashair1.github.io/csd-340/">Home</a>
+      <a href="#About">About</a>
+      <a href="#Contact">Contact</a>
+  
+    </div>
+    
+    <br />
+    <button onclick="show()">Reload</button>
+    <div id="myDIV">
+      <a href=#
+         onmouseover="h22.src='IMG_4573.JPG';"
+         onmouseout= "h22.src='IMG_4575.JPG';"
+         onclick="hide()"
+         
+        
+      >
+        <img border = 0 name = "h22" src = "IMG_4575.JPG">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Run your mouse over the image to change. Clicking makes the image disappear.
+      <br />
+
+    </div>
+    <button onclick="appear()">Appear</button>
+    <div id="myDIV2" style="display: none;">
+      <a href=#
+         onmouseover="moon.src='IMG_4602.JPG';"
+         onmouseout= "moon.src='IMG_4602.JPG';"
+         onclick="appear()"
+      >
+        <img border = 0 name = "moon" src = "IMG_4602.JPG">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Just press the button already.
+      <br />
+    
+
+    </div>
+
+  </body>
+
+</html>
