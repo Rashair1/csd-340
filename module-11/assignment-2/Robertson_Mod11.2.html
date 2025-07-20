@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+Rashai Robertson
+Module - 11
+7/20/2025
+-->
+<html>
+  <head>
+    <title>
+      CSD 340 Web Development with HTML and CSS
+    </title>
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="Module11, Assignment2" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Rashai Robertson" />
+    <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+
+      function hide() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "none";
+          }
+      }
+
+      function show() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "block";
+          }
+      }
+
+      function appear() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+          }
+      }
+
+     //JavaScript for adding, deleting, and displaying items
+
+      const entries = []; 
+      // Array to hold user entries
+
+      function addItem() {
+      const inputBox = document.getElementById("inputBox");
+      const input = inputBox.value.trim();
+
+      if (input !== "") {
+        const index = entries.length;
+        entries.push(input);
+        alert(`Added "${input}" at item position ${index}`);
+        inputBox.value = "";
+      } else {
+        alert("Please add text to continue.");
+      }
+    }
+
+    function deleteLastItem() {
+      if (entries.length > 0) {
+        entries.pop();
+        alert("Last entry deleted.");
+      }
+      else {
+        alert("No entries to delete.");
+      }
+    }
+
+    function displayItems() {
+      const entriesDiv = document.getElementById("entries");
+      if (entries.length > 0) {
+        const formatted = entries.map((e, i) => `Item ${i + 1} = ${e}`).join("<br>");
+        entriesDiv.innerHTML = `<strong>Item List:</strong><br>${formatted}`;
+      } else {
+        entriesDiv.innerHTML = "<em>No entries to display.</em>";
+      }
+    }
+
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='Robertson_Mod9_3.css' />
+
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    </header>
+  
+    <div class="navbar">
+      <a href="https://rashair1.github.io/csd-340/">Home</a>
+      <a href="#About">About</a>
+      <a href="#Contact">Contact</a>
+  
+    </div>
+    
+    <br />
+    <div id="myDIV">
+      <input type="text" id="inputBox" placeholder="Enter text here">
+      <button onclick="addItem()">Add</button>
+      <button onclick="deleteLastItem()">Delete Last Entry</button>
+      <button onclick="displayItems()">Display</button>
+    </div>
+
+    <div id="entries"></div>
+    <br />
+
+  </body>
+
+</html>
