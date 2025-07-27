@@ -14,6 +14,45 @@ Assignment-12.2
     <meta name="robots" content="nofollow" />
     <meta name="author" content="Rashai Robertson" />
     <link href="Robertson_Mod3_3.css" type="text/css" rel="stylesheet" />
+
+    <script>
+        // Array of my books 
+        const books = [
+          "Holy Bible",
+          "The Hunger Games",
+          "The Outsiders",
+          "Fahrenheit 451",
+          "Letter from Birmingham Jail",
+          "Diary of a Wimpy Kid",
+          "Junie B. Jones",
+          "Goosebumps",
+          "Of Mice and Men",
+          "The Godfather"
+        ];
+
+        // Displaying my books Top to Bottom
+        function displayTopToBottom() {
+          const sortedBooks = [...books];
+          displayBooks(sortedBooks);
+        }
+
+        // Displaying my books Bottom to Top
+        function displayBottomToTop() {
+          const sortedBooks = [...books].reverse();
+          displayBooks(sortedBooks);
+        }
+
+        // Allowing the book list to move
+        function displayBooks(bookArray) {
+          const listElement = document.getElementById("bookList");
+          listElement.innerHTML = ""; // Clear previous content
+          bookArray.forEach(book => {
+            const li = document.createElement("li");
+            li.textContent = book;
+            listElement.appendChild(li);
+          });
+        }
+      </script>
   </head>
 
   <body>
@@ -55,53 +94,6 @@ Assignment-12.2
       <div class="newDiv"> </div>      
       <div class="lastDiv"> <a href="../../index.html">back to Landing Page</a> </div>
     </div>
-  
-      <div class="bookButtons">
-        <h3>Sorted Book List</h3>
-        <button onclick="displayTopToBottom()">Top to Bottom</button>
-        <button onclick="displayBottomToTop()">Bottom to Top</button>
-        <ul id="bookList"></ul>
-      </div>
-
-      <script>
-        // Array of my books 
-        const books = [
-          "Holy Bible",
-          "The Hunger Games",
-          "The Outsiders",
-          "Fahrenheit 451",
-          "Letter from Birmingham Jail",
-          "Diary of a Wimpy Kid",
-          "Junie B. Jones",
-          "Goosebumps",
-          "Of Mice and Men",
-          "The Godfather"
-        ];
-
-        // Displaying my books Top to Bottom
-        function displayTopToBottom() {
-          const sortedBooks = [...books];
-          displayBooks(sortedBooks);
-        }
-
-        // Displaying my books Bottom to Top
-        function displayBottomToTop() {
-          const sortedBooks = [...books].reverse();
-          displayBooks(sortedBooks);
-        }
-
-        // Allowing the book list to move
-        function displayBooks(bookArray) {
-          const listElement = document.getElementById("bookList");
-          listElement.innerHTML = ""; // Clear previous content
-          bookArray.forEach(book => {
-            const li = document.createElement("li");
-            li.textContent = book;
-            listElement.appendChild(li);
-          });
-        }
-      </script>
-
   </body>
 
 </html>
