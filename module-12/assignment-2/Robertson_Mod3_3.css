@@ -1,0 +1,63 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.leftDiv, .rightDiv {
+  width: 45%;
+  
+  
+}
+
+.leftDiv {
+  float: left;
+  border: 1px solid;
+  border-color: red;
+  border-radius: 15px; 
+}
+
+.rightDiv {
+  float: right;
+  border: 1px dashed;
+  border-color: red;
+  border-radius: 15px;
+}
+
+.newDiv {
+  width: 100%;
+  margin-top: 60%;
+float: right;
+  margin-bottom: 20px;
+  
+}
+
+.lastDiv {
+  width: 100%;
+  margin-top: 60%;
+}
+
+ul {
+  padding: 10px;
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+ol {
+  padding: 10px;
+  list-style-position: inside;
+}
+
+li {
+  font-weight: 300;
+}
+
+a {
+  float: right;
+}
+
+a:hover {
+  text-decoration: underline;
+}

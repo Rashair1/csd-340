@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+Rashai Robertson
+CSD-340
+Module-12
+Assignment-12.2
+7/27/2025 
+-->
+<html lang="en">
+  <head>
+    <title> CSD 340 Web Development with HTML and CSS </title>
+    <meta name="description" content="CSD-340 Landing Page" />
+    <meta name="keywords" content="Module3, Assignment2" />
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="Rashai Robertson" />
+    <link href="Robertson_Mod3_3.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1> Assignment 12.2: JavaScript - Part 4</h1>
+      <div class="leftDiv">
+        
+        <h3> Top 10 Favorite Books </h3>
+        <div class="bookButtons">
+          
+          <button onclick="displayTopToBottom()">Top to Bottom</button>
+          <button onclick="displayBottomToTop()">Bottom to Top</button>
+          <hr>
+        
+        <ol id="bookList">
+          <li> Holy Bible </li>
+          <li> The Hunger Games</li>
+          <li> The Outsiders</li>
+          <li> Fahrenheit 451 </li>
+          <li> Letter from Birmingham Jail </li>
+          <li> Diary of a Wimpy Kid</li>
+          <li> Junie B. Jones </li>
+          <li> Goosebumps</li>
+          <li> Of Mice and Men</li>
+          <li> The Godfather </li>
+        </ol>
+        </div>  
+      </div>
+      <div class="rightDiv">
+        <h3> 5 Things I’ve Learned Since the Course Started </h3>
+        <ul>
+          <li> When using a div remember to put a period before the name in CSS.I made this mistake in assignment 3.2, but I fixed it.</li>
+          <li> You can have a seperate CSS file. </li>
+          <li> How to use GitHub Pages.</li>
+          <li> How to make an index page.</li>
+          <li> To make sure that site visitors see exactly what we want them to see instead of what we expect them to see. </li>
+        </ul>
+      </div>
+      <div class="newDiv"> </div>      
+      <div class="lastDiv"> <a href="index.html">back to Landing Page</a> </div>
+    </div>
+  
+      <div class="bookButtons">
+        <h3>Sorted Book List</h3>
+        <button onclick="displayTopToBottom()">Top to Bottom</button>
+        <button onclick="displayBottomToTop()">Bottom to Top</button>
+        <ul id="bookList"></ul>
+      </div>
+
+      <script>
+        // Array of my books 
+        const books = [
+          "Holy Bible",
+          "The Hunger Games",
+          "The Outsiders",
+          "Fahrenheit 451",
+          "Letter from Birmingham Jail",
+          "Diary of a Wimpy Kid",
+          "Junie B. Jones",
+          "Goosebumps",
+          "Of Mice and Men",
+          "The Godfather"
+        ];
+
+        // Displaying my books Top to Bottom
+        function displayTopToBottom() {
+          const sortedBooks = [...books];
+          displayBooks(sortedBooks);
+        }
+
+        // Displaying my books Bottom to Top
+        function displayBottomToTop() {
+          const sortedBooks = [...books].reverse();
+          displayBooks(sortedBooks);
+        }
+
+        // Allowing the book list to move
+        function displayBooks(bookArray) {
+          const listElement = document.getElementById("bookList");
+          listElement.innerHTML = ""; // Clear previous content
+          bookArray.forEach(book => {
+            const li = document.createElement("li");
+            li.textContent = book;
+            listElement.appendChild(li);
+          });
+        }
+      </script>
+
+  </body>
+
+</html>
